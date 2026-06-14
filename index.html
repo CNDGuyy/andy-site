@@ -78,7 +78,7 @@
   .mascot-glow{position:absolute;width:420px;height:420px;border-radius:50%;
     background:radial-gradient(circle,rgba(255,214,10,.55),rgba(255,179,0,.12) 45%,transparent 68%);
     filter:blur(6px);animation:pulse 4s ease-in-out infinite}
-  .mascot{width:min(380px,82vw);position:relative;z-index:2;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 18px 30px rgba(0,0,0,.5))}
+  .mascot{width:min(360px,80vw);aspect-ratio:1;object-fit:cover;border-radius:50%;border:4px solid rgba(255,214,10,.5);position:relative;z-index:2;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 18px 34px rgba(0,0,0,.55))}
   @keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-16px) rotate(1deg)}}
   @keyframes pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.07);opacity:1}}
 
@@ -167,7 +167,7 @@
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="#home" class="brand"><span class="logo" id="navlogo"></span> ANDY</a>
+    <a href="#home" class="brand"><span class="logo" id="navlogo"><img src="https://cdn1.telesco.pe/file/Ah2tcdVv-0spMG9QclTkzZ3MNpa1Vry6PbfxWedLRUO3BqGuj_znekecdkU6PGnyCD422pUlJUhQnY5f5ugVi8Wwqm0J1IH9tDC3NS-i-WYe33nlo1RvjwTVG9onYl-DYSHdPptFkJP0-r4DbwTqhW5ZyyebQ3D7OGTrvzWGgUI2_CgWDFM-26R0Lufh3JcHGExyvKorqv5u0Gy2vpvOXe8Sxp49zEG0YspxSYYKn55ZDVO3ZS8-pUdsqQzI5xa5Y77sCn2eHd998C_OCVfXCeIcvz-U8WtUH3w-mBb1NtjcRFUG6a0W9ER9_r1mkf3vOQAopgxAoTc5hHPqbXIA1A.jpg" alt="ANDY" style="width:100%;height:100%;object-fit:cover" /></span> ANDY</a>
     <nav class="nav-links" id="navlinks">
       <a href="#home">Home</a>
       <a href="#about">Lore</a>
@@ -210,28 +210,7 @@
     </div>
     <div class="mascot-wrap">
       <div class="mascot-glow"></div>
-      <svg class="mascot" id="mascot" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-label="ANDY mascot">
-        <defs>
-          <radialGradient id="face" cx="42%" cy="38%" r="70%">
-            <stop offset="0%" stop-color="#FFE869"/>
-            <stop offset="55%" stop-color="#FFD60A"/>
-            <stop offset="100%" stop-color="#F0B400"/>
-          </radialGradient>
-        </defs>
-        <ellipse cx="74" cy="120" rx="34" ry="52" fill="#F4BE00" transform="rotate(-18 74 120)"/>
-        <ellipse cx="226" cy="120" rx="34" ry="52" fill="#F4BE00" transform="rotate(18 226 120)"/>
-        <circle cx="150" cy="150" r="104" fill="url(#face)" stroke="#caa000" stroke-width="3"/>
-        <circle cx="116" cy="132" r="30" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
-        <circle cx="190" cy="132" r="30" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
-        <circle cx="122" cy="138" r="15" fill="#141414"/>
-        <circle cx="184" cy="138" r="15" fill="#141414"/>
-        <circle cx="127" cy="133" r="5" fill="#fff"/>
-        <circle cx="189" cy="133" r="5" fill="#fff"/>
-        <ellipse cx="150" cy="172" rx="11" ry="8" fill="#141414"/>
-        <path d="M96 178 Q150 250 204 178 Q150 208 96 178 Z" fill="#7a1f1f"/>
-        <path d="M120 196 Q150 232 180 196 Q150 212 120 196 Z" fill="#ff5d7a"/>
-        <path d="M96 178 Q150 196 204 178" fill="none" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
-      </svg>
+      <img class="mascot" id="mascot" src="https://cdn1.telesco.pe/file/Ah2tcdVv-0spMG9QclTkzZ3MNpa1Vry6PbfxWedLRUO3BqGuj_znekecdkU6PGnyCD422pUlJUhQnY5f5ugVi8Wwqm0J1IH9tDC3NS-i-WYe33nlo1RvjwTVG9onYl-DYSHdPptFkJP0-r4DbwTqhW5ZyyebQ3D7OGTrvzWGgUI2_CgWDFM-26R0Lufh3JcHGExyvKorqv5u0Gy2vpvOXe8Sxp49zEG0YspxSYYKn55ZDVO3ZS8-pUdsqQzI5xa5Y77sCn2eHd998C_OCVfXCeIcvz-U8WtUH3w-mBb1NtjcRFUG6a0W9ER9_r1mkf3vOQAopgxAoTc5hHPqbXIA1A.jpg" alt="ANDY — The Forgotten OG mascot" />
     </div>
   </div>
 </section>
@@ -354,11 +333,7 @@
 </footer>
 
 <script>
-  (function(){
-    var m = document.getElementById('mascot');
-    if(m){ var c = m.cloneNode(true); c.removeAttribute('class'); c.removeAttribute('id'); c.style.width='100%'; c.style.height='100%';
-      document.getElementById('navlogo').appendChild(c); }
-  })();
+  /* nav logo uses the mascot image directly (no clone needed) */
 
   var btn = document.getElementById('copyBtn');
   btn.addEventListener('click', function(){
