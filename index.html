@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ANDY — The Forgotten OG</title>
+<meta name="description" content="Before the meta. Before the influencers. There was ANDY. 2 years old. Still standing. Still grinding. Still early. The last survivor of the old internet on Solana." />
+<meta property="og:title" content="ANDY — The Forgotten OG" />
+<meta property="og:description" content="2 Years Old. Still Standing. Still Grinding. Still Early. 🐶⚔️" />
+<meta name="theme-color" content="#0a0b07" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FFD60A'/><circle cx='38' cy='45' r='9' fill='%23111'/><circle cx='66' cy='45' r='9' fill='%23111'/><path d='M30 62 q20 22 42 0' stroke='%23111' stroke-width='6' fill='none' stroke-linecap='round'/></svg>" />
+<style>
+  :root{
+    --bg:#0a0b07; --bg2:#10120a; --card:#14160d;
+    --gold:#FFD60A; --gold2:#FFB300; --amber:#ff9b1a;
+    --text:#f6f4e7; --muted:#a9a892; --line:rgba(255,214,10,.16);
+    --glow:rgba(255,200,20,.55);
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);
+    overflow-x:hidden;line-height:1.6;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(900px 600px at 78% -5%, rgba(255,179,0,.20), transparent 60%),
+      radial-gradient(700px 500px at 10% 25%, rgba(255,214,10,.10), transparent 60%),
+      radial-gradient(800px 700px at 50% 110%, rgba(255,155,26,.14), transparent 60%),
+      var(--bg);
+  }
+  .stars{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5}
+  h1,h2,h3,.display{font-family:'Fredoka',sans-serif;font-weight:600;line-height:1.05;letter-spacing:.5px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .gold{color:var(--gold)}
+  .section{padding:84px 0;position:relative}
+  .eyebrow{font-family:'Fredoka';color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:14px;margin-bottom:10px}
+  .sec-title{font-size:clamp(30px,5vw,52px);text-transform:uppercase;margin-bottom:14px;text-shadow:0 2px 30px rgba(255,200,20,.25)}
+  .lead{color:var(--muted);max-width:640px;font-size:17px}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Fredoka';font-weight:600;font-size:17px;
+    padding:14px 26px;border-radius:16px;cursor:pointer;border:0;transition:transform .15s ease, box-shadow .2s ease;letter-spacing:.5px}
+  .btn-primary{background:linear-gradient(180deg,var(--gold),var(--gold2));color:#1a1300;box-shadow:0 8px 28px rgba(255,180,0,.35),inset 0 1px 0 rgba(255,255,255,.4)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(255,180,0,.5)}
+  .btn-ghost{background:rgba(255,214,10,.06);color:var(--text);border:1px solid var(--line)}
+  .btn-ghost:hover{background:rgba(255,214,10,.12);transform:translateY(-2px)}
+
+  header.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
+    background:rgba(10,11,7,.72);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:'Fredoka';font-weight:600;font-size:21px}
+  .brand .logo{width:38px;height:38px;border-radius:50%;box-shadow:0 0 20px var(--glow);overflow:hidden;display:grid;place-items:center}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--muted);font-weight:500;font-size:15px;transition:color .15s}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{padding:9px 18px;font-size:15px}
+  .burger{display:none;background:none;border:0;color:var(--gold);font-size:26px;cursor:pointer}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:70px 0 40px}
+  .hero h1{font-size:clamp(44px,7.5vw,86px);text-transform:uppercase;font-weight:700}
+  .hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--gold);text-shadow:none}
+  .hero .tag{margin:18px 0 8px;font-family:'Fredoka';font-size:clamp(18px,2.4vw,24px);color:var(--text)}
+  .hero .sub{color:var(--muted);max-width:480px;margin-bottom:26px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+  .badges{display:flex;gap:10px;flex-wrap:wrap}
+  .badge{font-family:'Fredoka';font-size:13px;color:var(--gold);background:rgba(255,214,10,.08);
+    border:1px solid var(--line);padding:6px 13px;border-radius:999px}
+
+  .mascot-wrap{position:relative;display:flex;justify-content:center;align-items:center;min-height:360px}
+  .mascot-glow{position:absolute;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,214,10,.55),rgba(255,179,0,.12) 45%,transparent 68%);
+    filter:blur(6px);animation:pulse 4s ease-in-out infinite}
+  .mascot{width:min(380px,82vw);position:relative;z-index:2;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 18px 30px rgba(0,0,0,.5))}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-16px) rotate(1deg)}}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.07);opacity:1}}
+
+  .ca-box{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:8px 8px 8px 16px;max-width:540px;margin-top:6px}
+  .ca-box .lbl{font-family:'Fredoka';font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-right:4px;white-space:nowrap}
+  .ca-box code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+  .copy-btn{flex-shrink:0;background:linear-gradient(180deg,var(--gold),var(--gold2));color:#1a1300;
+    border:0;border-radius:10px;padding:9px 15px;font-family:'Fredoka';font-weight:600;cursor:pointer;font-size:14px;transition:transform .1s}
+  .copy-btn:active{transform:scale(.95)}
+  .copy-btn.done{background:#2fae57;color:#fff}
+
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,214,10,.04);
+    overflow:hidden;white-space:nowrap;padding:14px 0}
+  .marquee .track{display:inline-block;animation:scroll 22s linear infinite;font-family:'Fredoka';font-size:20px;color:var(--gold);letter-spacing:1px}
+  .marquee .track span{margin:0 22px;opacity:.9}
+  @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  .lore-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:start;margin-top:34px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
+  .lore p{margin-bottom:14px;color:#d9d7c4}
+  .lore p strong{color:var(--gold);font-weight:600}
+  .quote{font-family:'Fredoka';font-size:22px;line-height:1.35;color:var(--text)}
+  .quote .gold{display:block;margin-top:10px;font-size:16px;color:var(--muted)}
+  .stat-stack{display:flex;flex-direction:column;gap:14px}
+  .stat{display:flex;align-items:center;gap:14px}
+  .stat .n{font-family:'Fredoka';font-size:34px;color:var(--gold);min-width:64px}
+  .stat .t{color:var(--muted);font-size:15px}
+
+  .tok-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:34px}
+  .tok{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;text-align:center;transition:transform .2s,border-color .2s}
+  .tok:hover{transform:translateY(-4px);border-color:rgba(255,214,10,.4)}
+  .tok .ic{font-size:30px;margin-bottom:8px}
+  .tok .v{font-family:'Fredoka';font-size:26px;color:var(--gold);margin-bottom:4px}
+  .tok .k{color:var(--muted);font-size:14px;text-transform:uppercase;letter-spacing:1px}
+  .supply-banner{margin-top:22px;text-align:center;background:linear-gradient(180deg,rgba(255,214,10,.10),rgba(255,179,0,.04));
+    border:1px solid var(--line);border-radius:18px;padding:26px}
+  .supply-banner .v{font-family:'Fredoka';font-size:clamp(34px,6vw,56px);color:var(--gold)}
+  .supply-banner .k{color:var(--muted);text-transform:uppercase;letter-spacing:3px;font-size:13px}
+
+  #dexscreener-embed{position:relative;width:100%;padding-bottom:125%;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+  @media(min-width:1400px){#dexscreener-embed{padding-bottom:65%}}
+  #dexscreener-embed iframe{position:absolute;width:100%;height:100%;top:0;left:0;border:0}
+
+  .social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
+  .social{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);
+    border-radius:18px;padding:22px;transition:transform .2s,border-color .2s}
+  .social:hover{transform:translateY(-4px);border-color:rgba(255,214,10,.45)}
+  .social .si{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(255,214,10,.1);color:var(--gold);flex-shrink:0}
+  .social .si svg{width:24px;height:24px}
+  .social b{font-family:'Fredoka';font-size:18px;display:block}
+  .social span{color:var(--muted);font-size:14px}
+
+  .faq{margin-top:30px;display:flex;flex-direction:column;gap:12px}
+  details.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 20px;transition:border-color .2s}
+  details.q[open]{border-color:rgba(255,214,10,.4)}
+  details.q summary{font-family:'Fredoka';font-size:18px;cursor:pointer;list-style:none;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  details.q summary::-webkit-details-marker{display:none}
+  details.q summary::after{content:"+";color:var(--gold);font-size:24px;transition:transform .2s}
+  details.q[open] summary::after{transform:rotate(45deg)}
+  details.q p{color:#d9d7c4;padding:0 0 18px}
+
+  footer{border-top:1px solid var(--line);padding:40px 0 60px;text-align:center;color:var(--muted)}
+  footer .fca{font-family:ui-monospace,monospace;font-size:12px;word-break:break-all;color:var(--gold);margin:10px 0}
+  footer .disc{font-size:12px;max-width:620px;margin:14px auto 0;opacity:.7}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:880px){
+    .hero{grid-template-columns:1fr;text-align:center}
+    .hero-cta,.badges{justify-content:center}
+    .hero .sub{margin-left:auto;margin-right:auto}
+    .ca-box{margin-left:auto;margin-right:auto}
+    .mascot-wrap{order:-1;min-height:300px}
+    .lore-grid{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .burger{display:block}
+    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;
+      background:rgba(10,11,7,.97);border-bottom:1px solid var(--line);padding:18px 22px;gap:18px}
+  }
+</style>
+</head>
+<body>
+<canvas class="stars" id="stars"></canvas>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="brand"><span class="logo" id="navlogo"></span> ANDY</a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">Lore</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#chart">Chart</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary nav-cta" href="#buy">Buy $ANDY</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section id="home" class="section" style="padding-top:30px">
+  <div class="wrap hero">
+    <div class="reveal in">
+      <h1>The <span class="stroke">Forgotten</span> OG</h1>
+      <p class="tag">2 Years Old. Still Standing. Still Grinding. <span class="gold">Still Early.</span> 🐶⚔️</p>
+      <p class="sub">Before the meta. Before the influencers. Before the endless rugs… there was <b>ANDY</b> — the last survivor of the old internet, awake again in the trenches of Solana.</p>
+      <div class="hero-cta" id="buy">
+        <a class="btn btn-primary" href="https://jup.ag/swap/SOL-7jF7tjSKLambtJMiAyCXfaj8nVrqF3UfJxgWP9tKLGwT" target="_blank" rel="noopener">🚀 Buy $ANDY</a>
+        <a class="btn btn-ghost" href="#chart">📈 Live Chart</a>
+      </div>
+      <div class="ca-box">
+        <span class="lbl">CA</span>
+        <code id="ca">7jF7tjSKLambtJMiAyCXfaj8nVrqF3UfJxgWP9tKLGwT</code>
+        <button class="copy-btn" id="copyBtn" data-ca="7jF7tjSKLambtJMiAyCXfaj8nVrqF3UfJxgWP9tKLGwT">Copy</button>
+      </div>
+      <div class="badges" style="margin-top:18px">
+        <span class="badge">⛓ Solana</span>
+        <span class="badge">🚫 0/0 Tax</span>
+        <span class="badge">🔥 LP Burned</span>
+        <span class="badge">🤝 100% Community</span>
+      </div>
+    </div>
+    <div class="mascot-wrap">
+      <div class="mascot-glow"></div>
+      <svg class="mascot" id="mascot" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-label="ANDY mascot">
+        <defs>
+          <radialGradient id="face" cx="42%" cy="38%" r="70%">
+            <stop offset="0%" stop-color="#FFE869"/>
+            <stop offset="55%" stop-color="#FFD60A"/>
+            <stop offset="100%" stop-color="#F0B400"/>
+          </radialGradient>
+        </defs>
+        <ellipse cx="74" cy="120" rx="34" ry="52" fill="#F4BE00" transform="rotate(-18 74 120)"/>
+        <ellipse cx="226" cy="120" rx="34" ry="52" fill="#F4BE00" transform="rotate(18 226 120)"/>
+        <circle cx="150" cy="150" r="104" fill="url(#face)" stroke="#caa000" stroke-width="3"/>
+        <circle cx="116" cy="132" r="30" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+        <circle cx="190" cy="132" r="30" fill="#fff" stroke="#1a1a1a" stroke-width="3"/>
+        <circle cx="122" cy="138" r="15" fill="#141414"/>
+        <circle cx="184" cy="138" r="15" fill="#141414"/>
+        <circle cx="127" cy="133" r="5" fill="#fff"/>
+        <circle cx="189" cy="133" r="5" fill="#fff"/>
+        <ellipse cx="150" cy="172" rx="11" ry="8" fill="#141414"/>
+        <path d="M96 178 Q150 250 204 178 Q150 208 96 178 Z" fill="#7a1f1f"/>
+        <path d="M120 196 Q150 232 180 196 Q150 212 120 196 Z" fill="#ff5d7a"/>
+        <path d="M96 178 Q150 196 204 178" fill="none" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="mq">
+    <span>STILL EARLY ⚔️</span><span>STILL GRINDING 🐶</span><span>THE OLD DOG IS BACK 🔥</span><span>NO VCs · NO PAID KOLs 🚫</span><span>WHO WAS HERE FIRST? 👀</span>
+    <span>STILL EARLY ⚔️</span><span>STILL GRINDING 🐶</span><span>THE OLD DOG IS BACK 🔥</span><span>NO VCs · NO PAID KOLs 🚫</span><span>WHO WAS HERE FIRST? 👀</span>
+  </div>
+</div>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">📜 The Legend</p>
+      <h2 class="sec-title">Andy: The Forgotten OG</h2>
+      <p class="lead">For two years he sat quietly in the shadows of the trenches. Forgotten by most. Ignored by the crowd. While everyone chased the next shiny thing — Andy never left.</p>
+    </div>
+    <div class="lore-grid">
+      <div class="card lore reveal">
+        <p>Legends say Andy isn't just a meme… he's the <strong>last survivor of the old internet</strong>. A yellow-faced degen who watched thousands of projects come and go, laughing as they vanished into the void.</p>
+        <p>Now, after years of silence, Andy has <strong>awakened</strong>. Not with VC money. Not with paid KOLs. Not with fake promises. Just <strong>pure community conviction</strong>.</p>
+        <p>Every holder is a chapter. Every raid is a battle. Every buy is another brick in the comeback story.</p>
+        <p>The old dog isn't here to compete… he's here to remind the trenches <strong>who was here first.</strong> 🐶⚔️</p>
+      </div>
+      <div class="card reveal">
+        <p class="quote">"The old dog never left the trenches."<span class="gold">— Andy, probably</span></p>
+        <div class="stat-stack" style="margin-top:24px">
+          <div class="stat"><span class="n">2yr</span><span class="t">Surviving in the shadows</span></div>
+          <div class="stat"><span class="n">0</span><span class="t">VCs, paid KOLs &amp; fake promises</span></div>
+          <div class="stat"><span class="n">100%</span><span class="t">Community conviction</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tokenomics" class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">📊 Tokenomics</p>
+      <h2 class="sec-title">The Old Dog Plays Fair</h2>
+      <p class="lead">No tax to bleed the trenches. No team bags. No presale games. Just a clean, fair launch for the believers.</p>
+    </div>
+    <div class="supply-banner reveal">
+      <div class="k">Total Supply</div>
+      <div class="v">1,000,000,000</div>
+      <div class="k" style="letter-spacing:2px;margin-top:4px">$ANDY</div>
+    </div>
+    <div class="tok-grid">
+      <div class="tok reveal"><div class="ic">🚫</div><div class="v">0% / 0%</div><div class="k">Buy / Sell Tax</div></div>
+      <div class="tok reveal"><div class="ic">🔥</div><div class="v">Burned</div><div class="k">Liquidity Pool</div></div>
+      <div class="tok reveal"><div class="ic">🧢</div><div class="v">0%</div><div class="k">Team Allocation</div></div>
+      <div class="tok reveal"><div class="ic">🤝</div><div class="v">100%</div><div class="k">Community Owned</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="chart" class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">📈 Live Chart</p>
+      <h2 class="sec-title">Watch The Comeback</h2>
+      <p class="lead" style="margin-bottom:30px">Real-time price action straight from DexScreener.</p>
+    </div>
+    <div class="reveal">
+      <div id="dexscreener-embed"><iframe src="https://dexscreener.com/solana/J83LRw1Bs8ac44AKqivF8G4p7mWWwsKS3H5CPqLbAof3?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15" title="ANDY live chart"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<section id="community" class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">🤝 Join The Pack</p>
+      <h2 class="sec-title">Every Holder Is A Chapter</h2>
+      <p class="lead">The comeback is written by the community. Get in the trenches with the old dog.</p>
+    </div>
+    <div class="social-grid">
+      <a class="social reveal" href="#" target="_blank" rel="noopener" data-social="x">
+        <span class="si"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817-5.967 6.817H1.68l7.73-8.835L1.254 2.25h6.83l4.713 6.231 5.447-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg></span>
+        <span><b>X / Twitter</b><span>Follow the comeback →</span></span>
+      </a>
+      <a class="social reveal" href="#" target="_blank" rel="noopener" data-social="tg">
+        <span class="si"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
+        <span><b>Telegram</b><span>Join the pack →</span></span>
+      </a>
+      <a class="social reveal" href="https://dexscreener.com/solana/J83LRw1Bs8ac44AKqivF8G4p7mWWwsKS3H5CPqLbAof3" target="_blank" rel="noopener">
+        <span class="si"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v2H3V3zm0 16h18v2H3v-2zM5 7h4v10H5V7zm6 3h4v7h-4v-7zm6-2h2v9h-2V8z"/></svg></span>
+        <span><b>DexScreener</b><span>Track the chart →</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">❓ FAQ</p>
+      <h2 class="sec-title">Questions From The Trenches</h2>
+    </div>
+    <div class="faq">
+      <details class="q reveal"><summary>What is ANDY?</summary><p>ANDY is the forgotten OG of the trenches — a yellow-faced degen who's survived 2 years while thousands of projects came and went. He's not just a meme; he's the last survivor of the old internet, now awake on Solana and powered purely by community conviction.</p></details>
+      <details class="q reveal"><summary>Is there a tax?</summary><p>None. 0% buy, 0% sell. The old dog doesn't nickel-and-dime the trenches.</p></details>
+      <details class="q reveal"><summary>Who's the team?</summary><p>No VCs. No paid KOLs. No fake promises. The "team" is every holder. Every holder is a chapter, every raid a battle, every buy another brick in the comeback story.</p></details>
+      <details class="q reveal"><summary>Why now?</summary><p>After two years sitting quietly in the shadows, ignored by the crowd, Andy has finally awakened — to remind the trenches who was here first.</p></details>
+      <details class="q reveal"><summary>How do I buy $ANDY?</summary><p>1) Get a Solana wallet like Phantom. 2) Fund it with SOL. 3) Hit "Buy $ANDY" to swap on Jupiter using the contract address — or paste the CA into your wallet's swap. Always confirm the CA matches the one on this page.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="justify-content:center;font-size:24px;margin-bottom:6px">🐶 ANDY</div>
+    <div>2 Years Old. Still Standing. Still Grinding. Still Early.</div>
+    <div class="fca">CA: 7jF7tjSKLambtJMiAyCXfaj8nVrqF3UfJxgWP9tKLGwT</div>
+    <p class="disc">$ANDY is a community meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. Crypto is volatile — do your own research and never invest more than you can afford to lose. Nothing here is financial advice.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var m = document.getElementById('mascot');
+    if(m){ var c = m.cloneNode(true); c.removeAttribute('class'); c.removeAttribute('id'); c.style.width='100%'; c.style.height='100%';
+      document.getElementById('navlogo').appendChild(c); }
+  })();
+
+  var btn = document.getElementById('copyBtn');
+  btn.addEventListener('click', function(){
+    var ca = btn.getAttribute('data-ca');
+    var done = function(){ btn.textContent='Copied!'; btn.classList.add('done'); setTimeout(function(){ btn.textContent='Copy'; btn.classList.remove('done'); },1600); };
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(ca).then(done).catch(fallback); }
+    else fallback();
+    function fallback(){ var t=document.createElement('textarea'); t.value=ca; document.body.appendChild(t); t.select();
+      try{document.execCommand('copy');}catch(e){} document.body.removeChild(t); done(); }
+  });
+
+  var burger=document.getElementById('burger'), links=document.getElementById('navlinks');
+  burger.addEventListener('click',function(){ links.classList.toggle('open'); });
+  links.addEventListener('click',function(e){ if(e.target.tagName==='A') links.classList.remove('open'); });
+
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  (function(){
+    var cv=document.getElementById('stars'), ctx=cv.getContext('2d'), stars=[];
+    function size(){ cv.width=innerWidth; cv.height=innerHeight; stars=[]; var n=Math.min(140,Math.floor(innerWidth/12));
+      for(var i=0;i<n;i++) stars.push({x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*1.4+.2,a:Math.random(),s:Math.random()*.02+.004}); }
+    function draw(){ ctx.clearRect(0,0,cv.width,cv.height);
+      for(var i=0;i<stars.length;i++){ var st=stars[i]; st.a+=st.s; var o=.3+Math.abs(Math.sin(st.a))*.7;
+        ctx.beginPath(); ctx.arc(st.x,st.y,st.r,0,7); ctx.fillStyle='rgba(255,224,120,'+o*.7+')'; ctx.fill(); }
+      requestAnimationFrame(draw); }
+    size(); draw(); addEventListener('resize',size);
+  })();
+</script>
+</body>
+</html>
